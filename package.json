@@ -1,0 +1,32 @@
+{
+  "name": "mp-pro-backend",
+  "version": "1.0.0",
+  "description": "mercado pago pro backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcgoandete/mp-pro-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lcgoandete/mp-pro-backend/issues"
+  },
+  "homepage": "https://github.com/lcgoandete/mp-pro-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-rescue": "^1.1.31",
+    "mercadopago": "^1.5.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
