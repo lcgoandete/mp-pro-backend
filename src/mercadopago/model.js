@@ -28,7 +28,7 @@ async function payment(payer, product) {
           number: payer.phone.number,
       },
       address: {
-          street_name: payer.address.street,
+          street_name: payer.address.publicPlace,
           street_number: payer.address.number,
           zip_code: payer.address.zipCode
       }
