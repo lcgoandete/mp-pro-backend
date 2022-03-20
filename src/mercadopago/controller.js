@@ -6,4 +6,12 @@ const payment = async (req, res) => {
   return res.status(200).json(result);
 };
 
-module.exports = { payment };
+const notification = async (req, res) => {
+  console.log(req.body);
+  return res.status(200);
+};
+
+module.exports = {
+  payment,
+  notification,
+};

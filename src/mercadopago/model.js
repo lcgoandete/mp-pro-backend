@@ -37,7 +37,6 @@ async function payment(payer, product) {
       failure: 'https://mp-pro-frontend.herokuapp.com/failure',
       pending: 'https://mp-pro-frontend.herokuapp.com/pending'
     },
-    auto_return: 'approved',
     payment_methods: {
       excluded_payment_methods: [
         {
@@ -46,13 +45,14 @@ async function payment(payer, product) {
       ],
       installments: 6
     },
-    notification_url: 'https://mp-pro-backend.herokuapp.com/ipn',
+    auto_return: 'approved',
     external_reference: product.externalReference,
+    notification_url: 'https://mp-pro-backend.herokuapp.com/ipn',
   };
 
   try {
     const result = await mercadopago.preferences.create(preference);
-    return result.body;
+    return result.body.id;
     // const result = await mercadopago.preferences.findById("6024630-eebf90a2-5446-49df-9057-faa42258723e")
     // console.log('client_id', result.body.client_id)
     // console.log('id', result.body.id);
