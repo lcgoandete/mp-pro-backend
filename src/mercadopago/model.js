@@ -3,6 +3,7 @@ const mercadopago = require('mercadopago');
 async function payment(payer, product) {
   mercadopago.configure({
       access_token: process.env.ACCESS_TOKEN,
+      integrator_id: 'dev_24c65fb163bf11ea96500242ac130004',
   });
 
   const preference = {
